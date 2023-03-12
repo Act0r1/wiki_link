@@ -78,12 +78,13 @@ def main():
         if len(all_urls) == 2:
             src, dest = all_urls[0], all_urls[-1]
             text = find_paragraph(src, dest)
-            print(text)
+            print(text[0])
         if len(all_urls) > 2:
             for x in range(1, len(all_urls) - 1):
                 src, dest = all_urls[x - 1], all_urls[x]
                 text = find_paragraph(src, dest)
-                print(text)
+                for t in text:
+                    print(t)
 
 
 main()
