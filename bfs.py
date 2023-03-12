@@ -27,8 +27,6 @@ def get_link(url):
 
 def bfs(start, end):
     visited = set()
-    if start == end:
-        return start
     queue = deque([(start, [start])])
     while queue:
         url, path = queue.popleft()
